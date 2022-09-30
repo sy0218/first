@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}ppost_all.html{% endblock %}
+
+
+
+{% block extra-style %}
+<style type="text/css">
+    #date{
+        color: black;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+<h1>Blog List</h1>
+
+<div class="container-fluid blog">
+    <div class="container">
+        <div class="blog-row row">
+            {% for post in posts %}
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="blog-col">
+                    <img src="{% static 'img/d2.jpg' %}" alt="">
+                    <h2><a href='{{post.get_absolute_url}}'>{{ post.title }}</a></h2>
+                    <p id="date">{{ post.modify_dt|date:"N d, Y" }}</p>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<br />
+
+<div>
+    <span>
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number}}">PreviousPage</a>
+        {% endif%}
+
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number}}">NextPage</a>
+        {% endif%}
+    </span>
+</div>
+{% endblock %}

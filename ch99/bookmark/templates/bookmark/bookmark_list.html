@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}bookmark_list.html{% endblock %}
+
+{% block content %}
+    <h1>해외 여행지 리스트</h1>
+
+    <br>
+
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="/bookmark/1/"><img class="carousel-img d-block w-100" src="https://images.unsplash.com/photo-1520519860237-19345a870618?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80" alt="First slide" height="700px" width="150px"></a>
+              <div class="carousel-caption d-none d-md-block">
+                  <p class="subtitle"> 벚꽃이 피는 3월 벚꽃이 유명한 도시 오사카라는 도시를 추천해드려요</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <a href="/bookmark/2/"><img class="carousel-img d-block w-100" src="https://images.unsplash.com/photo-1512553840337-276c0d80a43a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80" alt="Second slide" height="700px" width="150px"></a>
+             <div class="carousel-caption d-none d-md-block">
+                  <p class="subtitle"> 자연과 친해질수 있는 나라 태국은 어떠신가요?</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <a href="/bookmark/3/"><img class="carousel-img d-block w-100" src="https://images.unsplash.com/photo-1553608622-8c715b1b5145?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80" alt="Third slide" height="700px" width="150px"></a>
+             <div class="carousel-caption d-none d-md-block">
+                  <p class="subtitle"> 매력적인 비즈니스 도시 뉴옥 높은 빌딩 숲과 도시의 감성을 느낄 수 있습니다</p>
+              </div>
+          
+          </div>
+          <div class="carousel-item">
+            <a href="/bookmark/4/"><img class="carousel-img d-block w-100" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA0MTdfMjQ0%2FMDAxNTIzOTI1MTE0NzE3.fA2-T_WhMDHAJWfJuPwSbAirzHRzettt4r5NhIfs3Csg.9-L8Ad_KjIvqBZoQdV-8yA5WlHqxXaJu2RHBZOHiiUwg.JPEG.space3159%2F%25BE%25C6%25C0%25CC%25BD%25BD%25B6%25F5%25B5%25E5_%25BF%25C0%25B7%25CE%25B6%25F3.jpg&type=sc960_832" alt="Third slide" height="700px" width="150px"></a>
+           <div class="carousel-caption d-none d-md-block">
+                <p class="subtitle"> 아이슬란드 풍경들은 무척 신비로우며 특히 오로라는 커다란 감동을 선사합니다</p>
+            </div>
+        
+        </div>
+      </div>
+      
+      
+      <!-- Control Btn -->
+      
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+  
+{% endblock %}
